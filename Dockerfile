@@ -21,7 +21,6 @@ RUN mkdir -p /var/lib/pgbouncer && \
   groupadd -r pgbouncer --gid=999 && \
 	useradd -u 999 -g 999 pgbouncer --home-dir=/var/lib/pgbouncer && \
   chown -R pgbouncer:pgbouncer /var/lib/pgbouncer && \
-  chown -R pgbouncer:pgbouncer /usr/local/src/pgbouncer && \
   chown -R pgbouncer:pgbouncer /etc/pgbouncer
 
 WORKDIR /usr/local/src/pgbouncer
