@@ -15,7 +15,7 @@ This image expects pgbouncer configuration files to be placed in `/etc/pgbouncer
 To run a container, execute:
 
 ```sh
-docker run -it  \
+docker run \
 -v $(pwd)/pgbouncer.ini:/etc/pgbouncer/pgbouncer.ini \
 -v $(pwd)/userlist.txt:/etc/pgbouncer/userlist.txt \
 fernandochristyanto/pgbouncer:1.15.0
