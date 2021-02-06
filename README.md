@@ -1,6 +1,6 @@
 # PgBouncer
 
-A Dockerized pgBouncer for postgres connection pooling
+A Dockerized pgBouncer for postgres connection pooling. This image is available in [dockerhub](https://hub.docker.com/repository/docker/fernandochristyanto/pgbouncer) for pulling.
 
 ## How To Use This Image
 
@@ -18,7 +18,7 @@ To run a container, execute:
 docker run -it  \
 -v $(pwd)/pgbouncer.ini:/etc/pgbouncer/pgbouncer.ini \
 -v $(pwd)/userlist.txt:/etc/pgbouncer/userlist.txt \
-fernandochristyanto:pgbouncer:1.15.0
+fernandochristyanto/pgbouncer:1.15.0
 ```
 
 This container exposes pgbouncer at port `6432`
