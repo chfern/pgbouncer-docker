@@ -11,14 +11,13 @@ A Dockerized pgBouncer for postgres connection pooling. This image is available 
 
 ### Running the container
 
-This image expects pgbouncer configuration files to be placed in `/etc/pgbouncer/*`.  
+This image expects pgbouncer configuration files to be placed in `/etc/pgbouncer/*` and exposes pgbouncer at port 6432.  
 To run a container, execute:
 
 ```sh
 docker run \
+-p 6432:6432 \
 -v $(pwd)/pgbouncer.ini:/etc/pgbouncer/pgbouncer.ini \
 -v $(pwd)/userlist.txt:/etc/pgbouncer/userlist.txt \
 fernandochristyanto/pgbouncer:1.15.0
 ```
-
-This container exposes pgbouncer at port `6432`
